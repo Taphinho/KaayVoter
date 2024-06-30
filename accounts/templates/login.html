@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Authentification</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/header.css' %}">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="logo">
+              <img src="">
+              </div>
+            <div>
+              <nav class="">
+              <ul class="menu">
+                  <li><a href="#">ACCUEIL+</a></li>
+                  <li><a href="#">PROGRAMMES CANDIDATS+</a></li>
+                  <li><a href="#">RÉSULTATS+</a></li>
+                  <li>
+                      <input type="text" placeholder="Rechercher">
+                  </li>
+                <li><button type="submit">COMMENT VOTER ?</button></li>
+              </ul>
+            </nav>
+            </div>
+          </div>
+    </header>
+    <div class="containerauth">
+        <div class="containerauth2">
+        <div class="backg"></div>
+        <h1 class="auth">Authentification</h1>
+        <form class="authForm" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="bouton" type="submit">Suivant</button>
+        </form>
+        <p class="verify">Pas éligible ? <a href="#">Vérifier</a></p>
+        </div>
+    </div>
+</body>
+</html>

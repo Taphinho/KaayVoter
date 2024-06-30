@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulletin de Vote</title>
+    <link rel="stylesheet" href="{% static 'css/vote.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+</head>
+<body>
+    
+<header>
+    <div class="header">
+        <div class="logo">
+          <img src="">
+          </div>
+        <div>
+          <nav class="">
+          <ul class="menu">
+              <li><a href="#">ACCUEIL+</a></li>
+              <li><a href="#">PROGRAMMES CANDIDATS+</a></li>
+              <li><a href="#">RÉSULTATS+</a></li>
+              <li>
+                  <input type="text" placeholder="Rechercher">
+              </li>
+            <li><button type="submit">COMMENT VOTER ?</button></li>
+          </ul>
+        </nav>
+        </div>
+      </div>
+</header>
+    <div class="containervote">
+        <h1 class="info">BULLETIN DE VOTE</h1>
+        <h2 class="info">DE TOUS LES CANDIDATS</h2>
+        <div class="grid">
+            {% for candidat in candidats %}
+            <div class="card" id="candidat-{{ candidat.id }}">
+                <img src="/static/{{ candidat.image }}" alt="Candidat">
+                <button class="candidat" data-candidat-id="{{ candidat.id }}" data-value="{{ candidat.id }}">Cliquer pour voter</button>
+            </div>
+            {% endfor %}
+            
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+
+    $(document).ready(function() {
+        $('.candidat').click(function(e) {
+            e.preventDefault();
+            
+            var candidatId = $(this).data('candidat-id');
+            
+            $.ajax({
+                type: 'POST',
+                url: "{% url 'vote' %}",
+                data: {
+                    'candidatId': candidatId,
+                    'csrfmiddlewaretoken': '{{ csrf_token }}'
+                },
+                success: function(response) {
+                    // Mettez à jour l'affichage ou effectuez d'autres actions en cas de succès
+
+                    console.log(response); // Exemple: afficher la réponse dans la console
+                    if (response.success) {
+                    // Mettez à jour l'affichage ou redirigez l'utilisateur si nécessaire
+                        window.location.href = "{% url 'vote_success' %}"; // Exemple de rechargement de la page après un succès
+                    } else {
+                        window.location.href = "{% url 'error' %}";
+                    // Gérer d'autres actions en cas d'erreur spécifique
+                }
+                },
+                error: function(xhr, status, error) {
+                    console.error(xhr.responseText); // Gestion des erreurs
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>

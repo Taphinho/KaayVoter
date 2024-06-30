@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote réussi</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+}
+
+.success-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 40px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.success-title {
+    font-size: 36px;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.success-message {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.btn-back {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-back:hover {
+    background-color: #45a049;
+}
+
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <h1 class="success-title">Vote réussi!</h1>
+        <p class="success-message">Merci d'avoir voté. Votre voix compte!</p>
+        <a href="{% url 'index' %}" class="btn-back">Retour à l'accueil</a>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.backg{
+    background-image:url(backg.jpeg);
+    filter:opacity(5%);
+    width:100%; 
+    height:100%; 
+    top:0; 
+    left:0; 
+    position:fixed;
+    z-index:-1
+}
+.search{
+    border: 1px  #ccc;
+    border-radius: 25px;
+    /*padding: 15px 30px;*/
+    height: 50px;
+    font-size: 16px;
+    width:100%;
+    background-color: #e4e3e3;
+    margin-bottom: 15px;
+}
+
+.containerauth {
+    /*margin-top: 150px;*/
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+}
+.containerauth2{
+    width: 25%;
+}
+
+.authForm {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    display: block;
+    /*margin: 10px 0 5px;*/
+    margin-left: 28px;
+}
+
+
+.bouton {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius:20px;
+    background-color: #d9534f;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.bouton:hover {
+    /*background-color: #c9302c;*/
+    background-color: darkred;
+}
+
+.verify a {
+    color: #d9534f;
+    text-decoration: none;
+}
+
+.verify a:hover {
+    text-decoration: underline;
+}
+.auth{
+    color:rgb(173, 7, 7);
+    font-weight: bolder;
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.verify{
+    text-align: center;
+}

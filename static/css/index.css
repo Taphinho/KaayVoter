@@ -1,0 +1,132 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-image: url('path/to/senegal-flag-ba.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-image: url('path/to/senegal-flag-corner.png');
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: left top, right top;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.search-vote {
+    display: flex;
+    align-items: center;
+}
+
+.search-vote input {
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.vote-button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    color: #fff;
+    position: relative;
+}
+
+.intro-text {
+    max-width: 45%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.intro-text h1 {
+    font-size: 2.5em;
+    color: #d9534f;
+}
+
+.intro-text h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.intro-text p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.eligibility-button {
+    background-color: #d9534f;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.intro-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    background-color: #f8f9fa;
+    position: relative;
+    z-index: 1;
+}
+
+.card {
+    max-width: 28%; /* Réduction de la largeur des cartes */
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: #d9534f;
+}
+
+.card p {
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+.card a {
+    color: #d9534f;
+    text-decoration: none;
+    font-weight: bold;
+}

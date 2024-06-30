@@ -1,0 +1,68 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kaay Voter - Gestion d'Élection</title>
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
+        <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <div class="logo">
+                  <img src="">
+                  </div>
+                <div>
+                  <nav class="">
+                  <ul class="menu">
+                      <li><a href="#">ACCUEIL+</a></li>
+                      <li><a href="#">PROGRAMMES CANDIDATS+</a></li>
+                      <li><a href="#">RÉSULTATS+</a></li>
+                      <li>
+                          <input type="text" placeholder="Rechercher">
+                      </li>
+                    <li><button type="submit"><a href="{% url 'login' %}"> VOTEZ </a></button></li>
+                  </ul>
+                </nav>
+                </div>
+              </div>
+        </header>
+        <main>
+            <section class="intro">
+                <div class="intro-text">
+                    <h1>Bienvenue sur <span class="highlight">Kaay Voter</span></h1>
+                    <h2>VOTRE PLATEFORME DE GESTION D'ÉLECTION.</h2>
+                    <p>
+                        Une plateforme de vote en ligne qui vous permet de voter électroniquement de manière sécurisée,
+                        vérifiable et confidentielle depuis n'importe où avec juste votre téléphone et une connexion Internet.
+                    </p>
+                    <button class="eligibility-button">Éligible ?</button>
+                </div>
+                <div class="intro-image">
+                    <img src="{% static 'image/palais.jpg' %}" alt="Palais présidentiel">
+                </div>
+            </section>
+    
+            <section class="info">
+                <div class="card">
+                    <h3>Portail informations électorale</h3>
+                    <p>Les informations complètes et à jour sur les élections, les candidats, les résultats et les procédures de vote.</p>
+                    <a href="#">LIRE PLUS ➔</a>
+                </div>
+                <div class="card">
+                    <h3>Annonces électorales</h3>
+                    <p>Les communications officielles sur les élections, incluant les dates, les candidats, et les procédures de vote.</p>
+                    <a href="#">LIRE PLUS ➔</a>
+                </div>
+                <div class="card">
+                    <h3>Actualités électorales</h3>
+                    <p>Les informations et des mises à jour récentes sur les élections, les candidats, et les résultats.</p>
+                    <a href="#">LIRE PLUS ➔</a>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
